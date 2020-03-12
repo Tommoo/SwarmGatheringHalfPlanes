@@ -1,6 +1,6 @@
 # SwarmGatheringHalfPlanes
 
-Code for the research paper ''Probabilistic Gathering of Agents with Simple Sensors''.
+Code for the research paper ''Probabilistic Gathering of Agents with Simple Sensors'' from Ariel Barel, Thomas Dagès, Rotem Manor, and Ariel Barel.
 
 Each folder represents a different scheme of evolution:
 - Codes in the folders discrete and continous/memoryless are those described in the paper.
