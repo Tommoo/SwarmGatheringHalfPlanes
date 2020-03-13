@@ -154,8 +154,8 @@ for file_idx = 1:length(files_names)
     hFig.EdgeColor = 'r'; %For the last histogram
     hFig.LineWidth = 1.5; %For the last histogram
     title(['Normalised distribution of convergence time with n = ',num2str(n),' agents and delta = ',num2str(delta(file_idx))])
-    xlabel('Time of convergence')
-    ylabel(["Normalised count","Count_{bin}/Count_{total}"])
+    xlabel('Time of convergence','Fontweight','bold')
+    ylabel(["Normalised count","Count_{bin}/Count_{total}"],'Fontweight','bold')
     legend(legends_hist_all_normalised)
     list_h_hist_all_normalised{file_idx} = h_hist_all_normalised;
 end
@@ -179,12 +179,12 @@ for file_idx = 1:length(files_names)
     set(list_h_hist_all_normalised{file_idx},'visible','on');
     
     if save_res_fig
-        saveas(gcf,['res/conv_time/figures/discrete_deltaAnalysis_hist_tcv_n_',num2str(n),'_delta_',strrep(num2str(delta(file_idx)),'.','-'),'_square_size_',num2str(square_size),'_v_',num2str(v)],'fig')
-        saveas(gcf,['res/conv_time/figures/discrete_deltaAnalysis_hist_tcv_n_',num2str(n),'_delta_',strrep(num2str(delta(file_idx)),'.','-'),'_square_size_',num2str(square_size),'_v_',num2str(v)],'epsc')
+        saveas(gcf,['res/conv_time/figures/continuous_deltaAnalysis_hist_tcv_n_',num2str(n),'_delta_',strrep(num2str(delta(file_idx)),'.','-'),'_square_size_',num2str(square_size),'_v_',num2str(v)],'fig')
+        saveas(gcf,['res/conv_time/figures/continuous_deltaAnalysis_hist_tcv_n_',num2str(n),'_delta_',strrep(num2str(delta(file_idx)),'.','-'),'_square_size_',num2str(square_size),'_v_',num2str(v)],'epsc')
         %Eps save does not handle transparency of histogram so it rasterises instead :-( --> Go for pdf
         
         %Save figure in A4 page (bad: lots of white space)
-        %saveas(gcf,['res/conv_time/figures/discrete_nAnalysis_hist_tcv_n_',num2str(n(file_idx)),'_square_size_',num2str(square_size),'_v_',num2str(v)],'pdf')
+        %saveas(gcf,['res/conv_time/figures/continuous_nAnalysis_hist_tcv_n_',num2str(n(file_idx)),'_square_size_',num2str(square_size),'_v_',num2str(v)],'pdf')
         %Save figure with minimum white space
         %https://fr.mathworks.com/help/matlab/creating_plots/save-figure-with-minimal-white-space.html
         ax = gca;
@@ -199,7 +199,7 @@ for file_idx = 1:length(files_names)
         fig.PaperPositionMode = 'auto';
         fig_pos = fig.PaperPosition;
         fig.PaperSize = [fig_pos(3) fig_pos(4)];
-        print(fig,['res/conv_time/figures/discrete_deltaAnalysis_hist_tcv_n_',num2str(n),'_delta_',strrep(num2str(delta(file_idx)),'.','-'),'_square_size_',num2str(square_size),'_v_',num2str(v)],'-dpdf')
+        print(fig,['res/conv_time/figures/continuous_deltaAnalysis_hist_tcv_n_',num2str(n),'_delta_',strrep(num2str(delta(file_idx)),'.','-'),'_square_size_',num2str(square_size),'_v_',num2str(v)],'-dpdf')
     end
 end
 

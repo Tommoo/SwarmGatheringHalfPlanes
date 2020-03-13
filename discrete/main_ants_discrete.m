@@ -231,6 +231,8 @@ if memorise_r_display
     set(gca, 'YTick', unique([1, get(gca, 'YTick')]));
     set(gca, 'YTick', unique([2, get(gca, 'YTick')]));
     %legend('Radius','Level 1', 'Level 2')
+    xlabel('Time','Fontweight','bold')
+    ylabel('Radius of smallest enclosing circle','Fontweight','bold')
     title('Enclosing circle radius')
 end
 

@@ -261,6 +261,8 @@ if memorise_r_display
     %annotation('textbox', 'String', '0.005', 'Position', [0.085, 0.09881 0.034766 0.053571], 'EdgeColor','none')
     %annotation('textbox', 'String', '0.001', 'Position', [0.085, 0.09881 0.034766 0.053571], 'EdgeColor','none')
     %legend('Radius',['Level ',num2str(delta_blind)])
+    xlabel('Time','Fontweight','bold')
+    ylabel('Radius of smallest enclosing circle','Fontweight','bold')
     title('Enclosing circle radius')
 end
 

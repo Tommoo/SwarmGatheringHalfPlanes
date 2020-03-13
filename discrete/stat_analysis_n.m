@@ -112,8 +112,8 @@ for file_idx = 1:length(files_names)
     hFig.EdgeColor = 'r'; %For the last histogram
     hFig.LineWidth = 1.5; %For the last histogram
     title(['Normalised distribution of convergence time with n = ',num2str(n(file_idx)),' agents'])
-    xlabel('Time of convergence')
-    ylabel(["Normalised count","Count_{bin}/Count_{total}"])
+    xlabel('Time of convergence','FontWeight','bold')
+    ylabel(["Normalised count","Count_{bin}/Count_{total}"],'FontWeight','bold')
     legend(legends_hist_all_normalised)
     list_h_hist_all_normalised{file_idx} = h_hist_all_normalised;
 end
